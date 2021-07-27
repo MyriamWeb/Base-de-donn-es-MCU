@@ -56,3 +56,9 @@ WHERE `id_movie` = 2
 DELETE FROM `actors`
 WHERE `id_actor` = 100
 
+**************************
+**Afficher les 3 derniers acteurs ajoutés**
+
+SELECT last_name, first_name, created_at 
+FROM actors 
+ORDER BY created_at DESC LIMIT 3
