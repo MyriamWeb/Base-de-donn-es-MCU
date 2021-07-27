@@ -45,6 +45,7 @@ INSERT INTO `actors`(`id_actor`, `last_name`, `first_name`, `date_Birth`, `creat
 
 **************************
 **Requete pour modifier un film**
+
 Update `movies`
 SET `duration` = 120
 WHERE `id_movie` = 2
