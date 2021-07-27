@@ -19,10 +19,19 @@ SELECT last_name, first_name, year(NOW())-year(date_Birth) AS age FROM actors WH
 ***************************
 **La liste des acteurs pour un film donné**
 
+SELECT `last_name`,`first_name` 
+FROM intermediaries 
+LEFT JOIN movies ON intermediaries.id_movie=movies.id_movie 
+LEFT JOIN actors ON intermediaries.id_actor=actors.id_actor 
+WHERE `movies`.`title` = "Thor"
 
 ****************************
 **La liste des films pour un acteur donné**
 
+SELECT title FROM join_actor_movie
+LEFT JOIN movies ON join_actor_movie.id_movie=movies.id
+LEFT JOIN actors ON join_actor_movie.id_actor=actors.id
+WHERE actors.last_name = "Pratt";
 
 
 
