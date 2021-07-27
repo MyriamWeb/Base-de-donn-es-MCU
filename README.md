@@ -33,5 +33,25 @@ LEFT JOIN movies ON join_actor_movie.id_movie=movies.id
 LEFT JOIN actors ON join_actor_movie.id_actor=actors.id
 WHERE actors.last_name = "Pratt";
 
+****************************
+**Requete pour ajouter un film**
 
+INSERT INTO `movies`(`id_movie`, `title`, `director`, `release_date`, `duration`, `created_at`, `updated_at`) VALUES ("100","The Marvels","Nia DaCosta",'2022-11-09',130,NOW(),NOW())
+
+**************************
+**Requete pour ajouter un acteur**
+
+INSERT INTO `actors`(`id_actor`, `last_name`, `first_name`, `date_Birth`, `created_at`, `updated_at`) VALUES ("100","Jackson","Samuel.L",'1948-12-21',NOW(),NOW())
+
+**************************
+**Requete pour modifier un film**
+Update `movies`
+SET `duration` = 120
+WHERE `id_movie` = 2
+
+**************************
+**Requete pour supprimer un acteur**
+
+DELETE FROM `actors`
+WHERE `id_actor` = 100
 
