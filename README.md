@@ -28,10 +28,12 @@ WHERE `movies`.`title` = "Thor"
 ****************************
 **La liste des films pour un acteur donné**
 
-SELECT title FROM join_actor_movie
-LEFT JOIN movies ON join_actor_movie.id_movie=movies.id
-LEFT JOIN actors ON join_actor_movie.id_actor=actors.id
-WHERE actors.last_name = "Pratt";
+SELECT title 
+FROM intermediaries 
+JOIN movies ON intermediaries.id_movie = movies.id_movie 
+JOIN actors ON intermediaries.id_actor = actors.id_actor 
+WHERE actors.last_name = "Pratt" 
+ORDER BY movies.title ASC
 
 ****************************
 **Requete pour ajouter un film**
